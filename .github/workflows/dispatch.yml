@@ -13,6 +13,6 @@ jobs:
           curl -L \
             -X POST \
             -H "Accept: application/vnd.github+json" \
-            -u "ndsl7109256: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" \
+            H "Authorization: Bearer ${{ secrets.ACTION_TOKEN }}" \
             https://api.github.com/repos/ndsl7109256/Hello/actions/workflows/helloword.yml/dispatches \
             -d '{"ref":"main"}'
